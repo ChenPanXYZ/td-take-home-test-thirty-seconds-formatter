@@ -9,7 +9,7 @@ class ThirtySecondsFormatter {
         if (fracPart < 10) {
             fracPart = "0" + fracPart
         }
-        return intPart + "-" + fracPart;
+        return intPart + "-" + fracPart
     }
 }
 
@@ -18,28 +18,20 @@ class tester {
         let formatter = new ThirtySecondsFormatter()
 
         // Do the testes, and report all the cases the formatter fails.
-        let success = true
         if(formatter.convert(9.03125) !== "09-01") {
-            failCases.push(9.03125)
-            success = false
+            log("9.03125 doesn't work")
         }
         if (formatter.convert(1.0000) !== "01-00") {
-            failCases.push(1.0000)
-            success = false
+            log("1.0000 doesn't work")
         }
         if (formatter.convert(0.0000) !== "00-00") {
-            failCases.push(0.0000)
-            success = false
+            log("0.0000 doesn't work")
         }
         if (formatter.convert(1000.96875) !== "1000-31") {
-            failCases.push(1000.96875)
-            success = false
+            log("1000.96875 doesn't work")
         }
-
-        
-        if (success) {
-            log("The Thirty Seconds Formatter passes all the test cases!")
+        if (formatter.convert(101.28125) !== "101-09") {
+            log("101.28125 doesn't work")
         }
-        return null
     }
 }

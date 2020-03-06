@@ -7,7 +7,7 @@
 
 <button id = "formatter-button">Convert</button>
 
-<div id = "result"></div>
+<div id = "formatter-result"></div>
 
 <script>
     formatter = new ThirtySecondsFormatter()
@@ -17,7 +17,7 @@
     document.getElementById("formatter-button").addEventListener("click", function(){
         let input = document.getElementById("formatter-input").value
         let result = formatter.convert(input)
-        document.getElementById("result").innerHTML = result
+        document.getElementById("formatter-result").innerHTML = result
     })
 </script>
 </body>
