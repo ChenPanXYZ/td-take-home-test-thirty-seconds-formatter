@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="function.js"></script>
+
+<input id = "formatter-input"></input>
+
+<button id = "formatter-button">Convert</button>
+
+<div id = "result"></div>
+
+<script>
+    formatter = new ThirtySecondsFormatter()
+    tester = new tester()
+    tester.run()
+    
+    document.getElementById("formatter-button").addEventListener("click", function(){
+        let input = document.getElementById("formatter-input").value
+        let result = formatter.convert(input)
+        document.getElementById("result").innerHTML = result
+    })
+</script>
+</body>
+</html>
